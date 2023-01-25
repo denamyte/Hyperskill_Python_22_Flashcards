@@ -1,9 +1,9 @@
 from Flashcards.task.flashcards.checker import Checker
-from Flashcards.task.flashcards.input import Input
+from Flashcards.task.flashcards.userinput import UserInput
 
 
 def main():
-    cards = Input().set_data().cards
+    cards = UserInput().set_data().cards
     Checker(cards).check()
 
 

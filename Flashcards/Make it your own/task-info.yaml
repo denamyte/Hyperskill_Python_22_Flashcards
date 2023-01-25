@@ -151,29 +151,6 @@ files:
     if __name__ == "__main__":
         FlashcardsTest("flashcards.flashcards").run_tests()
   learner_created: false
-- name: flashcards/input.py
-  visible: true
-  text: |
-    from Flashcards.task.flashcards.card import Card
-
-
-    class Input:
-        def __init__(self):
-            self._card = Card()
-
-        def set_data(self):
-            self._card.term = input()
-            self._card.definition = input()
-            return self
-
-        @property
-        def card(self) -> Card:
-            return self._card
-
-        @card.setter
-        def card(self, value):
-            self._card = value
-  learner_created: true
 - name: flashcards/checker.py
   visible: true
   text: |
@@ -209,9 +186,32 @@ files:
     Definition:
     {self.definition}"""
   learner_created: true
+- name: flashcards/userinput.py
+  visible: true
+  text: |
+    from Flashcards.task.flashcards.card import Card
+
+
+    class Input:
+        def __init__(self):
+            self._card = Card()
+
+        def set_data(self):
+            self._card.term = input()
+            self._card.definition = input()
+            return self
+
+        @property
+        def card(self) -> Card:
+            return self._card
+
+        @card.setter
+        def card(self, value):
+            self._card = value
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/127/stages/675/implement#comment
 status: Solved
 feedback:
   message: Congratulations!
   time: "Wed, 25 Jan 2023 19:19:38 UTC"
-record: -1
+record: 3
