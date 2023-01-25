@@ -60,5 +60,8 @@ files:
         FlashcardsTest('flashcards.flashcards').run_tests()
   learner_created: false
 feedback_link: https://hyperskill.org/projects/127/stages/673/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 24 Jan 2023 21:04:20 UTC"
 record: -1
