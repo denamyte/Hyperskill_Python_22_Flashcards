@@ -1,13 +1,14 @@
+from typing import List
+
 from Flashcards.task.flashcards.card import Card
 
 
 class Checker:
-    def __init__(self, card: Card, definition: str):
-        self.card = card
-        self.definition = definition
+    def __init__(self, cards: List[Card]):
+        self._cards = cards
 
-    def __str__(self):
-        somehow = "right!" \
-            if self.card.definition == self.definition \
-            else "wrong..."
-        return f'Your answer is {somehow}'
+    def check(self):
+        for card in self._cards:
+            definition = input(f'Print the definition of "{card.term}":\n')
+            print('Correct!' if definition == card.definition else \
+                      f'Wrong. The right answer is "{card.definition}".')

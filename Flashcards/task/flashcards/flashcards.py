@@ -3,8 +3,8 @@ from Flashcards.task.flashcards.input import Input
 
 
 def main():
-    card = Input().set_data().card
-    print(Checker(card, input()))
+    cards = Input().set_data().cards
+    Checker(cards).check()
 
 
 if __name__ == '__main__':
