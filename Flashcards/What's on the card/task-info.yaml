@@ -69,6 +69,18 @@ files:
     if __name__ == "__main__":
         FlashcardsTest("flashcards.flashcards").run_tests()
   learner_created: false
+- name: flashcards/input.py
+  visible: true
+  learner_created: true
+- name: flashcards/card.py
+  visible: true
+  learner_created: true
+- name: flashcards/checker.py
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/127/stages/674/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Wed, 25 Jan 2023 09:23:52 UTC"
 record: -1

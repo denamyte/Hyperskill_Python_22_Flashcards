@@ -1,19 +1,10 @@
-class Card:
-    def __init__(self, term: str, definition: str):
-        self.term = term
-        self.definition = definition
-
-    def __str__(self):
-        return f"""\
-Card:
-{self.term}
-Definition:
-{self.definition}"""
+from Flashcards.task.flashcards.checker import Checker
+from Flashcards.task.flashcards.input import Input
 
 
 def main():
-    c = Card('purchase', 'buy')
-    print(c)
+    card = Input().set_data().card
+    print(Checker(card, input()))
 
 
 if __name__ == '__main__':
