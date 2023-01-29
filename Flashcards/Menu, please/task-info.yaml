@@ -306,9 +306,24 @@ files:
 - name: ./cards1.txt
   visible: true
   learner_created: true
+- name: flashcards/cards1.txt
+  visible: true
+  learner_created: true
+- name: flashcards/cards2.txt
+  visible: true
+  learner_created: true
+- name: flashcards/log.txt
+  visible: true
+  learner_created: true
+- name: flashcards/log2.txt
+  visible: true
+  learner_created: true
+- name: flashcards/data.py
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/10810#comment
 status: Solved
 feedback:
   message: Congratulations!
   time: "Sun, 29 Jan 2023 00:20:25 UTC"
-record: -1
+record: 5
