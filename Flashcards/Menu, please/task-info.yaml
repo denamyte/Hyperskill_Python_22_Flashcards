@@ -297,6 +297,18 @@ files:
     if __name__ == "__main__":
         FlashcardsTest("flashcards.flashcards").run_tests()
   learner_created: false
-feedback_link: https://hyperskill.org/projects/127/stages/677/implement#comment
-status: Unchecked
+- name: flashcards/menu.py
+  visible: true
+  learner_created: true
+- name: flashcards/storage.py
+  visible: true
+  learner_created: true
+- name: ./cards1.txt
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/10810#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 29 Jan 2023 00:20:25 UTC"
 record: -1

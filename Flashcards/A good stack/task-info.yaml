@@ -272,9 +272,9 @@ files:
         def cards(self) -> Dict[str, str]:
             return self._term_to_def
   learner_created: true
-feedback_link: https://hyperskill.org/projects/127/stages/676/implement#comment
+feedback_link: https://hyperskill.org/learn/step/10809#comment
 status: Solved
 feedback:
   message: Congratulations!
   time: "Wed, 25 Jan 2023 20:05:58 UTC"
-record: -1
+record: 4

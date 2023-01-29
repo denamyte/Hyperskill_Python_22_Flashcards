@@ -209,7 +209,7 @@ files:
         def card(self, value):
             self._card = value
   learner_created: true
-feedback_link: https://hyperskill.org/projects/127/stages/675/implement#comment
+feedback_link: https://hyperskill.org/learn/step/10808#comment
 status: Solved
 feedback:
   message: Congratulations!

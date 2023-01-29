@@ -78,7 +78,7 @@ files:
 - name: flashcards/checker.py
   visible: true
   learner_created: true
-feedback_link: https://hyperskill.org/projects/127/stages/674/implement#comment
+feedback_link: https://hyperskill.org/learn/step/10807#comment
 status: Solved
 feedback:
   message: Congratulations!

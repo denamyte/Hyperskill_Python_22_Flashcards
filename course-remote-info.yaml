@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/406082/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Thu, 01 Jan 1970 00:00:00 UTC"
+update_date: "Sat, 28 Jan 2023 23:06:25 UTC"
 stages:
 - id: 673
   step: 10806
@@ -19,7 +19,7 @@ stages:
   is_completed: true
 - id: 677
   step: 10810
-  is_completed: false
+  is_completed: true
 - id: 678
   step: 10811
   is_completed: false
@@ -145,6 +145,8 @@ topics:
     theory_id: 11680
   - title: Exception handling
     theory_id: 6270
+  - title: Linters and helpers
+    theory_id: 18652
   - title: Inheritance
     theory_id: 9844
   - title: Inheritance in Python
