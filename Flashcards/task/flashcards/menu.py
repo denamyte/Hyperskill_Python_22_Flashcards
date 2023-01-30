@@ -14,8 +14,17 @@ HARDEST_INFO_MUL = 'The hardest cards are {}. You have {} errors answering them.
 
 class Menus:
     def __init__(self):
+        self._import_from = ''
+        self._export_to = ''
         self._storage = Storage()
         self._log_list: List[str] = []
+
+    def set_imp_exp(self, import_path: str, export_path: str):
+        self._import_from = import_path
+        self._export_to = export_path
+
+    def initial_import(self):
+        self._import_from and self.import_cards(self._import_from)
 
     def log(self, line: str, input_mode=False) -> str | None:
         print(line)
@@ -45,14 +54,16 @@ class Menus:
         self.log('The card has been removed.\n' if self._storage.remove(term)
                  else f'Can\'t remove "{term}": there is no such card.\n')
 
-    def import_cards(self):
-        file_name = self.log('File name:', True)
+    def import_cards(self, file_name: str = ''):
+        if not file_name:
+            file_name = self.log('File name:', True)
         count = self._storage.import_cards(file_name)
         self.log('File not found.\n' if count == -1
                  else f'{count} cards have been loaded.\n')
 
-    def export_cards(self):
-        file_name = self.log('File name:', True)
+    def export_cards(self, file_name: str = ''):
+        if not  file_name:
+            file_name = self.log('File name:', True)
         count = self._storage.export_cards(file_name)
         self.log(f'{count} cards have been saved.\n')
 
@@ -72,6 +83,10 @@ class Menus:
             else:
                 self.log('Correct!')
         print()
+
+    def exit(self):
+        print('Bye bye!')
+        self._export_to and self.export_cards(self._export_to)
 
     def save_log(self):
         file_name = self.log('File name:', True)
@@ -98,7 +113,7 @@ COMMAND_DICT: Dict[str, Callable[[], None]] = {
     'import': menus.import_cards,
     'export': menus.export_cards,
     'ask': menus.test,
-    'exit': lambda: print('Bye bye!'),
+    'exit': menus.exit,
     'log': menus.save_log,
     'hardest card': menus.hardest_card,
     'reset stats': menus.reset_stats,
@@ -107,7 +122,9 @@ COMMAND_DICT: Dict[str, Callable[[], None]] = {
 INPUT_ACTION = f'Input the action ({", ".join(k for k in COMMAND_DICT.keys())}):'
 
 
-def menu_run():
+def menu_run(imp: str, exp: str):
+    menus.set_imp_exp(imp, exp)
+    menus.initial_import()
     cmd = ''
     while cmd != 'exit':
         cmd = menus.log(INPUT_ACTION, True)
